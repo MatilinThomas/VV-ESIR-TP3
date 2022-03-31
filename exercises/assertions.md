@@ -12,7 +12,7 @@ Answer the following questions:
 
 ## Answer
 
-1. Thsis assertion fails because it tries to find 2 equal float numbers, but there can be a really small difference when multiplicating 0.4 by 3, resulting in a number different from 1.2. To make a good assertion on this type of check, it is better to use `assertEquals(actual, expected, delta)` where delta is a float value describing the precision needed to accept the test or not. It can mitigate these types of differences between a multiplied float and the expected value of it.
+1. This assertion fails because it tries to find 2 equal float numbers, but there can be a really small difference when multiplicating 0.4 by 3, resulting in a number different from 1.2. To make a good assertion on this type of check, it is better to use `assertEquals(actual, expected, delta)` where delta is a float value describing the precision needed to accept the test or not. It can mitigate these types of differences between a multiplied float and the expected value of it.
 
 2. `assertEquals` uses the method `equals()`, which means if primitive values are passed, it will compare them, but if objects are passed, it will check if both objects are the same object. `assertSame` checks if both objects are in fact the same object by using `==` on references. 
 Scenarios`

@@ -26,5 +26,16 @@ assertEquals("yes","yes"); // this test passes
 assertSame("yes","yes");   // this test passes
 ```
 
-3. 
+3. `fail` can be used when you test a method which can return within a loop. Placing the `fail` after the loop can prevent the test from being validated even though it didn't return at the right time.
+
+```
+Random ran = new Random();
+int x = ran.nextInt(6);
+for(int i = 0; i < 5; i++) {
+    if(x+i % 2 == 0) return;
+}
+fail("Should have returned in the loop");
+```
+
+4. The advantage of `assertThrows` is that it can be used for specific parts of a test method, in contrary to the Junit 4 way.
 

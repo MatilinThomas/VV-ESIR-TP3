@@ -26,3 +26,25 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+1. First of all, we found one partition block: String is null or not. After that, we needed to check if strings with 0 grouping symbols are correctly handled, so a second block we created: Number of grouping symbols: 0 orr >=1. After that, we needed to test every possibility conerning the number or order of symbols. The most important characteristics are if grouping symbols are even or odd, and if they are in the right order (opening then closing symbols). Two other blocks can then be created based on thoses characteristics: number of grouping symbols: even or odd, and grouping symbols in order: true or false. One last step was refining the characteristic about odd symbols. There can be more opening or more closing symbols, resulting in different behaviours from the method. We created one last block: more closing symbols: true or false.
+ -String is null: true or false;
+ -Number of grouping symbols equals 0: true or false;
+ -Number of grouping symbols is even: true or false;
+ -More closing symbols: true or false;
+ -All grouping symbols in order: true or false;
+ 
+ The tests we decided to make are:
+ ```
+ null
+"string"
+"[[()string{}]]"
+"[[)(string{}]]"
+"(string"
+"[string"
+"{string"
+")string"
+"]string"
+"}string"
+"(string}{"
+"string}{)"
+ ```

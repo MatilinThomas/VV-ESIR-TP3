@@ -33,7 +33,7 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
  -More closing symbols: true or false;
  -All grouping symbols in order: true or false;
  
- The tests we decided to make are:
+ The tests we decided to make are based on those different input values:
  ```
  null
 "string"

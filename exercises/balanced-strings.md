@@ -84,3 +84,4 @@ public static boolean isBalanced(String str) {
 "(string}{"
 "string}{)"
  ```
+2. To evaluate the statement coverage, we checked if at least one of the 12 tests would execute the statement we focused on, and we checked for every statement in the method. We found that every single statement is covered by at least one test, so we did not need to add new test cases.

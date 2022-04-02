@@ -26,42 +26,6 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
-Here is the implementation of the method isBalanced:
-
-```
-public static boolean isBalanced(String str) {
-	if(str == null) return false;
-	Stack<Character> stack = new Stack<Character>();
-	for (char chr : str.toCharArray()) {
-		switch (chr) {
-		case ('{'):
-			stack.push(chr);
-			break;
-		case '(':
-			stack.push(chr);
-			break;
-		case '[':
-			stack.push(chr);
-			break;
-		case ']':
-			if (stack.isEmpty() || stack.pop() != '[')
-				return false;
-			break;
-		case ')':
-			if (stack.isEmpty() || stack.pop() != '(')
-				return false;
-			break;
-		case '}':
-			if (stack.isEmpty() || stack.pop() != '{')
-				return false;
-			break;
-		}
-	}
-	return stack.isEmpty();
-}
-```
-
-
 1. First of all, we found one partition block: String is null or not. After that, we needed to check if strings with 0 grouping symbols are correctly handled, so a second block we created: Number of grouping symbols: 0 orr >=1. After that, we needed to test every possibility conerning the number or order of symbols. The most important characteristics are if grouping symbols are even or odd, and if they are in the right order (opening then closing symbols). Two other blocks can then be created based on thoses characteristics: number of grouping symbols: even or odd, and grouping symbols in order: true or false. One last step was refining the characteristic about odd symbols. There can be more opening or more closing symbols, resulting in different behaviours from the method. We created one last block: more closing symbols: true or false.
  -String is null: true or false;
  -Number of grouping symbols equals 0: true or false;
@@ -87,3 +51,16 @@ public static boolean isBalanced(String str) {
 2. To evaluate the statement coverage, we checked if at least one of the 12 tests would execute the statement we focused on, and we checked for every statement in the method. We found that every single statement is covered by at least one test, so we did not need to add new test cases.
 
 3. The test cases written satisfy the Base Choice Coverage because we changed one single Base choice in each test case, and we have covered every base choice possible.
+
+4. - Statistics
+================================================================================
+>> Generated 13 mutations Killed 13 (100%)
+>> Ran 44 tests (3.38 tests per mutation)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.757 s
+[INFO] Finished at: 2022-04-02T17:57:19+02:00
+[INFO] ------------------------------------------------------------------------
+
+As seen above, we were able to kill all mutants on the first try.

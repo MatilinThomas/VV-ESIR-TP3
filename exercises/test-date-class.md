@@ -80,5 +80,9 @@ Quite similarly to the method previousDate, we used this input for the method pr
 | q2       Value of month | first month of the year | common month |
 | q3       Value of day   | first day of the month  | common day   | 
 
-2. I used the jacoco maven plugin to run the test coverage and obtained 100%, I've put a screenshot of the coverage on the same folder.
+2. I used the jacoco maven plugin to run the test coverage and obtained 100%, I've put a screenshot of the coverage in the exercice folder.
+
+3. Same as the previous question, jacoco checked the coverage of the branches in the "boolean lines" and did not find any not covered branches.
+
+4. When I first used the pit plugin, I got a mutation scrore of 90%, but some of it was due to the fact that I had not tested my getters .Other that that I had three mutants that survived, I eliminated two of them by adding two new tests that tested isValidDate with an input day of 0 and an input month of 0. And I eliminated the last one by changing one condition in the method nextDate by replacing this.year+1>12 by this.year==12. The mutant had modified the > by >= but the behhavior was'nt changing.
 

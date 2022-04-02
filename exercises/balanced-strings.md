@@ -52,7 +52,9 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 3. The test cases written satisfy the Base Choice Coverage because we changed one single Base choice in each test case, and we have covered every base choice possible.
 
-4. - Statistics
+4. 
+```
+- Statistics
 ================================================================================
 >> Generated 13 mutations Killed 13 (100%)
 >> Ran 44 tests (3.38 tests per mutation)
@@ -62,5 +64,5 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 [INFO] Total time:  31.757 s
 [INFO] Finished at: 2022-04-02T17:57:19+02:00
 [INFO] ------------------------------------------------------------------------
-
+```
 As seen above, we were able to kill all mutants on the first try.

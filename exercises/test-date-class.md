@@ -80,4 +80,5 @@ Quite similarly to the method previousDate, we used this input for the method pr
 | q2       Value of month | first month of the year | common month |
 | q3       Value of day   | first day of the month  | common day   | 
 
+2. I used the jacoco maven plugin to run the test coverage and obtained 100%, I've put a screenshot of the coverage on the same folder.
 

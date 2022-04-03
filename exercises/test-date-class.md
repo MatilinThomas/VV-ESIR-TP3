@@ -80,7 +80,7 @@ Quite similarly to the method previousDate, we used this input for the method pr
 | q2       Value of month | first month of the year | common month |
 | q3       Value of day   | first day of the month  | common day   | 
 
-2. I used the jacoco maven plugin to run the test coverage and obtained 100%, I've put a screenshot of the coverage in the exercice folder.
+2. I used the jacoco maven plugin to run the test coverage and obtained 100%, I've put a screenshot of the coverage in the code folder.
 
 3. Same as the previous question, jacoco checked the coverage of the branches in the "boolean lines" and did not find any not covered branches.
 

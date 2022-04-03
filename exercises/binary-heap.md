@@ -44,6 +44,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
  I decided to start by testing the push method so that I could use it for the next tests.
  For this method I considered 4 inputs, the height of the tree, the value of the root, tha value of the first childLeft and the value of the first childRight.
  I chose all of these inputs depending on the value of the input "element"
+ 
 |                            | b1                      | b2           | b3           | b4           | 
 | -----------------------    | -----------             | -----------  | ------------ |  ---------   |
 | q1       Tree's height     | 0                       | 1            | 2            |              |
